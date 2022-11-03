@@ -1,0 +1,23 @@
+---
+title: Cancer Rates by U.S. Sate
+author: Jerry Jiang
+date: '2022-11-03'
+slug: test1
+categories: []
+tags: []
+---
+# Description
+In the following bar plot, the rates at which people developed or died from cancer in 2013, the most recent year for which incidence data are available is plotted. The rates are the numbers out of 100,000 people. 
+
+
+See Figure \@ref(fig:pie) for the details:
+
+```{r pie, echo=FALSE, fig.cap='A bar plot.', tidy=FALSE}
+setwd("E:/TraumatiseD/Documents/UNSW/COMM2501")
+cancerrate<-read.csv(file = "E:/TraumatiseD/Documents/UNSW/COMM2501/uscs_map_death_all.csv")
+barplot(cancerrate$Rate, names.arg = cancerrate$State,
+        main = "Numbers out of 100,000 people who developed or died from cancer",
+        xlab = "States",
+        ylab = "Counts",
+        col = "darkred")
+```
